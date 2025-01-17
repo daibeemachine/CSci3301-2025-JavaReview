@@ -5,19 +5,48 @@ public class ColorPoint extends Point {
 	// Explain (in comments here or in a separate file) why enums are 
 	// a better choice than strings to represent colors
 	
-	private String color; // What is the initial value of color? 
+	private enum colors
+	{
+		RED, 
+		BLUE, 
+		YELLOW, 
+		GREEN, 
+		BROWN, 
+		MAROON
+	}
+	private colors color;
+
 	
-	public ColorPoint(int x, int y, String color) {
+	public ColorPoint(int x, int y, colors color) {
 		super(x, y); // call to the constructor of the superclass
 		this.color = color;
 	}
 	
 	// returns the color of a point
-	public String getColor() {
-		return color;
+	public colors getColor() 
+	{
+		switch(color)
+		{
+			case RED:
+				return colors.RED;
+			case BLUE:
+				return colors.BLUE;
+			case YELLOW:
+				return colors.YELLOW;
+			case GREEN:
+				return colors.GREEN;
+			case BROWN:
+				return colors.BROWN;
+			case MAROON:
+				return colors.MAROON;
+		}
+		return null;
+
 	}
 	
 	public String toString() {
 		return "ColorPoint: x = " + x + ", y = " + y + ", color = " + color;
 	}
+
+
 }

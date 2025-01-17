@@ -1,3 +1,6 @@
+
+import java.awt.Color;
+
 public class TestPoints {
 
 	public static void main(String[] args) {
@@ -46,18 +49,26 @@ public class TestPoints {
 		/****Lab Task 1: answer the following questions ********/
 		
 		// Q1: Which of the following is a valid statement? Why?
-		// Point p3 = new ColorPoint(3, 3, "maroon");
+		 Point p3 = new ColorPoint(3, 3, colors.MAROON);
+		 Point p5 = new Point(3, 3);
+		 
 		// ColorPoint cp3 = new Point(3,3);
-		
+		/*The ColorPoint class is inherited from the Point class. Therefore, this does not work when attempting to create a Point object within a Colorpoint object. */
 		// Q2: Uncomment a valid statement above. How can you call 
 		// getColor() on the resulting variable? 
+		// Cast the p3 object, which carries a ColorPoint constructor call, with the class ColorPoint.
 		
 		// Clearly explain what is required from the type safety standpoint
 		// to call this method. 
+
+		/*
+		 * In order to safely typecast a object, ensure that said object's constructor call carries the same class as the typecast itself (e.g., the typecast ColorPoint and the constructor call to ColorPoint share the same class).
+		 */
+
 		// Hint: use typecasting. 
 		
 		// Once you get the method to work, print out the result of getColor()
-		
+		System.out.println(((ColorPoint) p3).getColor());
 		// Q3: see ColorPoint class. 
 		
 		// Q4: create an array list of points. Then add 10 points to it,
