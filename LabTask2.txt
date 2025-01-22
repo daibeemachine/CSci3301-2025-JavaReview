@@ -1,4 +1,4 @@
 Q1:
-a. The square class assumes that the sides are equal. As a result, there lies some difficulty in modifying the two different sides of the square.
+a. While one may initially assume that Square satisfies the Liskov Substitution Principle due to acting as a type of rectangle, yet with the implementation of the Square class, the constructor only takes one parameter due to the sides being the same. Since the Rectangle class's methods work on the knowledge that a Rectangle possess two pairs of sides that may get modified, an instance of a Square cannot be used for a Rectangle Object.
 Therefore, the following methods do not produce an expected result or do not work: area(), perimeter(), setSide(), sidesEqual().
-b. As Point and ColorPoint share most methods (due to ColorPoint inheriting them from Point), the extra 
+b. As Point and ColorPoint share the same functionality among common methods (e.g., the distance() method return the same results for each point passed in), one may substitute Point for ColorPoint and vice-versa, satisfying Liskov Substitution Principle.

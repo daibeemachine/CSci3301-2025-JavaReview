@@ -2,7 +2,7 @@
  * A rectangle with integer sides.
  */
 
-public class Rectangle {
+public class Rectangle implements Shape{
 	protected int side1;
 	protected int side2;
 	
@@ -31,14 +31,14 @@ public class Rectangle {
 	/*
 	 * A method that returns the area of a rectangle
 	 */
-	public int area() {
+	public double area() {
 		return side1 * side2;
 	}
 	
 	/*
 	 * A method that returns the perimeter of a rectangle
 	 */
-	public int perimeter() {
+	public double perimeter() {
 		return 2 * side1 + 2 * side2;
 	}
 	

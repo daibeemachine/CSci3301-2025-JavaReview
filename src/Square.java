@@ -2,7 +2,7 @@
  * A class that represents a square with an integer side.
  */
 
-public class Square {
+public class Square implements Shape{
 	protected int side;
 	
 	/*
@@ -22,14 +22,14 @@ public class Square {
 	/*
 	 * A method that returns the area of a square
 	 */
-	public int area() {
+	public double area() {
 		return side * side;
 	}
 	
 	/*
 	 * A method that returns the perimeter of a square
 	 */
-	public int perimeter() {
+	public double perimeter() {
 		return 4 * side;
 	}
 
