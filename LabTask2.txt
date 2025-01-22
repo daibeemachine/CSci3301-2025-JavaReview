@@ -1,0 +1,4 @@
+Q1:
+a. The square class assumes that the sides are equal. As a result, there lies some difficulty in modifying the two different sides of the square.
+Therefore, the following methods do not produce an expected result or do not work: area(), perimeter(), setSide(), sidesEqual().
+b. As Point and ColorPoint share most methods (due to ColorPoint inheriting them from Point), the extra 
