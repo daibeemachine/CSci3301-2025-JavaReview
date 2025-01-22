@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class TestPoints {
 
@@ -80,6 +81,23 @@ public class TestPoints {
 		// Extra credit: Generate random colors that have an equal chance to 
 		// take any value in the enum, regardless of how many there are 
 		// in the enum.
+
+		ArrayList<Point> points = new ArrayList<Point>();
+		colors[] colorValues = colors.values();
+
+		for (int i = 0; i < 10; i++) {
+			int pointType = (int) (Math.random() * 2) + 1;
+			int randX = (int) (Math.random() * 21) - 10;
+			int randY = (int) (Math.random() * 21) - 10;
+			if (pointType == 1){ // Regular point
+				Point randPoint = new Point(randX, randY);
+				points.add(randPoint);
+			} else { // Color Point
+				colors color = colorValues[(int) (Math.random() * colorValues.length)];
+				Point randPoint = new ColorPoint(randX, randY, color);
+				points.add(randPoint);
+			}
+		}
 		
 		
 		// Q5: write a loop to go through the array list that you generate 
@@ -87,7 +105,17 @@ public class TestPoints {
 		// there are. 
 		// Print out the count after the loop.
 		// Hint: use instanceof 
-		
+		int count = 0;
+		for (Point point : points) {
+			System.out.println("Point: " + point);
+			if (point instanceof ColorPoint) {
+				ColorPoint colorPoint = (ColorPoint) point;
+				if (colorPoint.getColor().equals(colors.GREEN.name())) {
+					count++;
+			  }
+			}
+		}
+		System.out.println("Count of green points: " + count);
 		
 	}
 
