@@ -4,16 +4,11 @@ public class ColorPoint extends Point {
 	// Fix the getColor method and the TestPoint class constructor accordingly.
 	// Explain (in comments here or in a separate file) why enums are 
 	// a better choice than strings to represent colors
+
+	/*Enums provide a great way to set a group of constants for specific concepts (e.g., colors, fruits, sports) */
 	
-	private enum colors
-	{
-		RED, 
-		BLUE, 
-		YELLOW, 
-		GREEN, 
-		BROWN, 
-		MAROON
-	}
+	
+	
 	private colors color;
 
 	
@@ -46,7 +41,7 @@ public class ColorPoint extends Point {
 	
 	public String toString() {
 		return "ColorPoint: x = " + x + ", y = " + y + ", color = " + color;
-	}
+	}            
 
 
 }

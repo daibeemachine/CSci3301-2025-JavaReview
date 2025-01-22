@@ -1,6 +1,4 @@
 
-import java.awt.Color;
-
 public class TestPoints {
 
 	public static void main(String[] args) {
@@ -29,8 +27,8 @@ public class TestPoints {
 		System.out.println("Distance = " + p1.distance(p1));
 		
 		// Create color points
-		ColorPoint cp1 = new ColorPoint(2, 4, "blue");
-		ColorPoint cp2 = new ColorPoint(-2, 4, "green");
+		ColorPoint cp1 = new ColorPoint(2, 4, colors.MAROON);
+		ColorPoint cp2 = new ColorPoint(-2, 4, colors.GREEN);
 		
 		// Task: make it print out in a user-friendly way
 		System.out.println(cp1);
@@ -45,6 +43,7 @@ public class TestPoints {
 		
 		System.out.println("counter = " + cp2.getCounter());
 		
+
 		
 		/****Lab Task 1: answer the following questions ********/
 		
@@ -76,7 +75,7 @@ public class TestPoints {
 		// Generate the objects as follows:
 		// Each object has a 50% chance to be a Point or a ColorPoint
 		// Both x and y coordinates are random ints between -10 and 10 inclusive
-		// The color for a ColorPoint is randomly chosen among at least two colors. 
+		// The color for a ColorPoint is randomly chosen among at least two colors.
 		
 		// Extra credit: Generate random colors that have an equal chance to 
 		// take any value in the enum, regardless of how many there are 
