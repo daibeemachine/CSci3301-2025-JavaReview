@@ -116,33 +116,6 @@ public class TestPoints {
 			}
 		}
 		System.out.println("Count of green points: " + count);
-
-		//Question2C
-		
-		ArrayList<Shape> shapes = new ArrayList<>();
-		//Squares
-		for(int i = 0; i < 5; i++)
-		{
-			int x = (int) (Math.random() * 10) + 1;
-			shapes.add(new Square(x));
-		}
-		for(int i = 0; i < 5; i++)
-		{
-			int x = (int) (Math.random() * 10) + 1;
-			int y = (int) (Math.random() * 10) + 1;
-			shapes.add(new Rectangle(x, y));
-		}
-		for(int i = 0; i < 5; i++)
-		{
-			int x = (int) (Math.random() * 5) + 1;
-			shapes.add(new Circle(x));
-		}
-		for(Shape shape : shapes)
-		{
-			System.out.println("Shape's area: " + shape.area() + "\nShape's perimeter: " + shape.perimeter());
-		}
-
-		
 	}
 
 }

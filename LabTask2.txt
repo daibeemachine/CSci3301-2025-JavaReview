@@ -1,4 +1,10 @@
 Q1:
-a. While one may initially assume that Square satisfies the Liskov Substitution Principle due to acting as a type of rectangle, yet with the implementation of the Square class, the constructor only takes one parameter due to the sides being the same. Since the Rectangle class's methods work on the knowledge that a Rectangle possess two pairs of sides that may get modified, an instance of a Square cannot be used for a Rectangle Object.
-Therefore, the following methods do not produce an expected result or do not work: area(), perimeter(), setSide(), sidesEqual().
-b. As Point and ColorPoint share the same functionality among common methods (e.g., the distance() method return the same results for each point passed in), one may substitute Point for ColorPoint and vice-versa, satisfying Liskov Substitution Principle.
+a. While one may initially assume that Square satisfies the Liskov Substitution Principle due to acting as a type of rectangle, with the implementation of the Square class, 
+the constructor only takes one parameter due to the sides being the same. As a result, the methods in which a Square obtains the perimeter, area, and other methods differ from the method
+the Rectangle class uses, as the equations within the Square class assume that all sides are equal while the Rectangle class assumes that the height and width of the rectangle hold the potential to exist as different values from one another.
+Therefore, when a Square inherits a Rectangle or a Rectangle inherits a Square, these scenarios break Liskov Substitution Principle.
+
+The following methods do not produce an expected or correct result: area(), perimeter(), sidesEqual(), setSide(), setSide1(), setSide2().
+
+b. As Point and ColorPoint share the same functionality among common methods (e.g., the distance() method return the same results for each point passed in), 
+one may substitute Point for ColorPoint and vice-versa, satisfying Liskov Substitution Principle.
