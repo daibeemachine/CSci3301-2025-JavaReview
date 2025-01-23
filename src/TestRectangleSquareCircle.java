@@ -63,17 +63,20 @@ public class TestRectangleSquareCircle {
 			int x = (int) (Math.random() * 10) + 1;
 			shapes.add(new Square(x));
 		}
+		//Rectangles
 		for(int i = 0; i < 5; i++)
 		{
 			int x = (int) (Math.random() * 10) + 1;
 			int y = (int) (Math.random() * 10) + 1;
 			shapes.add(new Rectangle(x, y));
 		}
+		//Circles
 		for(int i = 0; i < 5; i++)
 		{
 			int x = (int) (Math.random() * 5) + 1;
 			shapes.add(new Circle(x));
 		}
+		//Areas and permimeters
 		for(Shape shape : shapes)
 		{
 			System.out.println("Shape's area: " + shape.area() + "\nShape's perimeter: " + shape.perimeter());
