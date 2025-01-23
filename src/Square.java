@@ -2,7 +2,7 @@
  * A class that represents a square with an integer side.
  */
 
-public class Square implements Shape{
+public class Square extends TwoSidedShape {
 	protected int side;
 	
 	/*
@@ -18,25 +18,21 @@ public class Square implements Shape{
 	public void setSide(int side) {
 		this.side = side;
 	}
-	
-	/*
-	 * A method that returns the area of a square
-	 */
-	public double area() {
-		return side * side;
-	}
-	
-	/*
-	 * A method that returns the perimeter of a square
-	 */
-	public double perimeter() {
-		return 4 * side;
-	}
 
 	/*
 	 * Returns true since the two sides of a square are always equal
 	 */
 	public boolean sidesEqual() {
 		return true;
+	}
+
+	@Override
+	public double getSide1() {
+		return side;
+	}
+
+	@Override
+	public double getSide2() {
+		return side;
 	}
 }

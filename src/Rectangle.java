@@ -2,7 +2,7 @@
  * A rectangle with integer sides.
  */
 
-public class Rectangle implements Shape{
+public class Rectangle extends TwoSidedShape{
 	protected int side1;
 	protected int side2;
 	
@@ -31,16 +31,6 @@ public class Rectangle implements Shape{
 	/*
 	 * A method that returns the area of a rectangle
 	 */
-	public double area() {
-		return side1 * side2;
-	}
-	
-	/*
-	 * A method that returns the perimeter of a rectangle
-	 */
-	public double perimeter() {
-		return 2 * side1 + 2 * side2;
-	}
 	
 	/*
 	 * A method that returns true if the two sides of the rectangle 
@@ -48,6 +38,16 @@ public class Rectangle implements Shape{
 	 */
 	public boolean sidesEqual() {
 		return side1 == side2;
+	}
+
+	@Override
+	public double getSide1() {
+		return side1;
+	}
+
+	@Override
+	public double getSide2() {
+		return side2;
 	}
 	
 }
